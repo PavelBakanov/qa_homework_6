@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 import pages.TextBoxPage;
 

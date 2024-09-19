@@ -4,8 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
 import pages.components.ResultTableOfRegistration;
 
-import java.util.PrimitiveIterator;
-
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -110,9 +108,8 @@ public class RegistrationPage {
         resultTableOfRegistration.checkResultOfRegistration(resultTableLocator,key, value);
         return this;
     }
-    public RegistrationPage checkNegativeResult() {
+    public void checkNegativeResult() {
         resultTableOfRegistration.checkNegativeResult(resultTableLocator);
-        return this;
     }
 
 
