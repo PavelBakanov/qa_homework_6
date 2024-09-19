@@ -11,7 +11,7 @@ public class RegistrationTests extends TestBase {
     String userNumber = "8999111223";
     String negativeUserNumber = "FFFF";
     String dayOfBirth = "28";
-    String monthOfBirth = "June";
+    String monthOfBirth = "October";
     String yearOfBirth = "1992";
     String subjectsOne = "English";
     String subjectsTwo = "Maths";
