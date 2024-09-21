@@ -7,16 +7,14 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TextBoxPage {
-    private SelenideElement fullNameLocator = $("#userName");
-    private SelenideElement userEmailLocator = $("#userEmail");
-    private SelenideElement currentAddressLocator = $("#currentAddress");
-    private SelenideElement permanentAddressLocator = $("#permanentAddress");
-    private SelenideElement submitButtonLocator = $("#submit");
-    private SelenideElement outputLocator = $("#output");
+    private final SelenideElement fullNameLocator = $("#userName");
+    private final SelenideElement userEmailLocator = $("#userEmail");
+    private final SelenideElement currentAddressLocator = $("#currentAddress");
+    private final SelenideElement permanentAddressLocator = $("#permanentAddress");
+    private final SelenideElement submitButtonLocator = $("#submit");
+    private final SelenideElement outputLocator = $("#output");
 
-    private ResultTableOfTextBox resultTableOfTextBox = new ResultTableOfTextBox();
-
-
+    private final ResultTableOfTextBox resultTableOfTextBox = new ResultTableOfTextBox();
 
     public TextBoxPage openPage() {
         open("/text-box");

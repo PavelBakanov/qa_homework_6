@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import pages.TextBoxPage;
 
 public class TextBoxTests extends TestBase {
-    private TextBoxPage textBoxPage = new TextBoxPage();
+    private final TextBoxPage textBoxPage = new TextBoxPage();
 
-    private String fullName = "Ivan Ivanov";
-    private String userEmail = "ivanov@ivan.ru";
-    private String currentAddress = "Some street, 1";
-    private String permanentAddress = "Some street, 25";
+    private final String fullName = "Ivan Ivanov";
+    private final String userEmail = "ivanov@ivan.ru";
+    private final String currentAddress = "Some street, 1";
+    private final String permanentAddress = "Some street, 25";
 
 
     @Test

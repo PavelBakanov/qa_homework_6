@@ -28,6 +28,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void registrationWithPageObjectsTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(userEmail)
@@ -59,6 +60,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void minimalDataRequiredTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setGender(gender)
@@ -73,6 +75,7 @@ public class RegistrationTests extends TestBase {
     @Test
     public void negativePhoneNumberTest() {
         registrationPage.openPage()
+                .removeBanner()
                 .setUserNumber(negativeUserNumber);
         registrationPage.checkNegativeResult();
     }

@@ -8,29 +8,33 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
-    private SelenideElement firstNameLocator = $("#firstName");
-    private SelenideElement lastNameLocator = $("#lastName");
-    private SelenideElement userEmailLocator = $("#userEmail");
-    private SelenideElement genderLocator = $("#genterWrapper");
-    private SelenideElement userNumberLocator = $("#userNumber");
-    private SelenideElement dateOfBirthLocator = $("#dateOfBirthInput");
-    private SelenideElement subjectsLocator = $("#subjectsInput");
-    private SelenideElement hobbiesLocator = $("#hobbiesWrapper");
-    private SelenideElement uploadPictureLocator = $("#uploadPicture");
-    private SelenideElement currentAddressLocator = $("#currentAddress");
-    private SelenideElement stateCityWrapperLocator = $("#stateCity-wrapper");
-    private SelenideElement stateLocator = $("#state");
-    private SelenideElement cityLocator = $("#city");
-    private SelenideElement submitButtonLocator = $("#submit");
+    private final SelenideElement firstNameLocator = $("#firstName");
+    private final SelenideElement lastNameLocator = $("#lastName");
+    private final SelenideElement userEmailLocator = $("#userEmail");
+    private final SelenideElement genderLocator = $("#genterWrapper");
+    private final SelenideElement userNumberLocator = $("#userNumber");
+    private final SelenideElement dateOfBirthLocator = $("#dateOfBirthInput");
+    private final SelenideElement subjectsLocator = $("#subjectsInput");
+    private final SelenideElement hobbiesLocator = $("#hobbiesWrapper");
+    private final SelenideElement uploadPictureLocator = $("#uploadPicture");
+    private final SelenideElement currentAddressLocator = $("#currentAddress");
+    private final SelenideElement stateCityWrapperLocator = $("#stateCity-wrapper");
+    private final SelenideElement stateLocator = $("#state");
+    private final SelenideElement cityLocator = $("#city");
+    private final SelenideElement submitButtonLocator = $("#submit");
 
-    private String resultTableLocator = ".table-responsive";
+    private final String resultTableLocator = ".table-responsive";
 
-    private CalendarComponent calendarComponent = new CalendarComponent();
-    private ResultTableOfRegistration resultTableOfRegistration = new ResultTableOfRegistration();
+    private final CalendarComponent calendarComponent = new CalendarComponent();
+    private final ResultTableOfRegistration resultTableOfRegistration = new ResultTableOfRegistration();
 
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
+        return this;
+    }
+
+    public RegistrationPage removeBanner() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;
